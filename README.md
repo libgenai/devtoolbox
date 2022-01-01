@@ -14,3 +14,8 @@ Online utilities for formatting, encoding/decoding etc are dangerous to use (man
 This app is written in Flutter and therefore, works on MacOS, Linux, Windows and even Web if your org would like to host it internally as a webapp. But do not expect this to work on Android and iOS.
 
 Make sure to [read the LICENSE](/LICENSE.md).
+
+### How to build:
+
+MacOS:
+`flutter build macos --release` will generate the .app file in `build/macos/Build/Products/Release/devtools.app`.

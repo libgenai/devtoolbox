@@ -8,6 +8,7 @@ import 'package:devtools/view/tabs/text_to_qr_code_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:macos_ui/macos_ui.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({Key? key}) : super(key: key);
@@ -17,26 +18,31 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
-  double ratingValue = 0;
-  double sliderValue = 0;
-  bool value = false;
-
   int pageIndex = 0;
 
   final List<Widget> pages = [
     const Base64EncodingDecodingScreen(),
     const JsonFormatValidateScreen(),
-    const JWTDebuggerScreen(),
     const JsonToYamlScreen(),
     const YamlToJsonScreen(),
     const QrCodeToTextScreen(),
     const TextToQrCodeScreen(),
+    const JWTDebuggerScreen(),
   ];
 
   Color textLuminance(Color backgroundColor) {
     return backgroundColor.computeLuminance() > 0.5
         ? Colors.black
         : Colors.white;
+  }
+
+  _launchURL() async {
+    const url = 'https://github.com/nileshtrivedi/devtoolbox/discussions';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 
   @override
@@ -57,7 +63,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 primary: Colors.white,
                 textStyle: const TextStyle(fontSize: 12),
               ),
-              onPressed: () {},
+              onPressed: _launchURL,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -107,16 +113,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   color: Colors.white70,
                 ),
                 label: Text(
-                  'JWT Debugger',
-                  style: TextStyle(fontSize: 13),
-                ),
-              ),
-              SidebarItem(
-                leading: MacosIcon(
-                  Icons.lock,
-                  color: Colors.white70,
-                ),
-                label: Text(
                   'JSON to YAML',
                   style: TextStyle(fontSize: 13),
                 ),
@@ -148,6 +144,16 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 ),
                 label: Text(
                   'Text to QR Image',
+                  style: TextStyle(fontSize: 13),
+                ),
+              ),
+              SidebarItem(
+                leading: MacosIcon(
+                  Icons.lock,
+                  color: Colors.white70,
+                ),
+                label: Text(
+                  'JWT Debugger',
                   style: TextStyle(fontSize: 13),
                 ),
               ),
