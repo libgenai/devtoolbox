@@ -6,7 +6,7 @@ Free and open-source software hoped to build a community of empowered users but 
 
 This is why, I was forced to use a variation on what’s known as a “delayed open-source license”:
 
-A: If you are using it for a for-profit company that has ten or more people:
+  - A: If you are using it for a for-profit company that has ten or more people:
     - A1: If you’re using this version of the work 3 years or more after its public release: [GPLv3](https://choosealicense.com/licenses/gpl-3.0/) applies
     - A2: If your company donates or pays more than 30,000 USD per year on an ongoing basis to any of these orgs (combined), [GPLv3](https://choosealicense.com/licenses/gpl-3.0/) applies:
         - [Electronic Freedom Foundation](https://www.eff.org/)
@@ -19,7 +19,7 @@ A: If you are using it for a for-profit company that has ten or more people:
     - A3: If you have obtained a separate license (25$ / device) for this particular work from the copyright holder (<a href="mailto:nilesh.tr@gmail.com">Nilesh Trivedi</a>), those terms will apply.
     - A4: If none of the above 3 conditions are satisfied, this work is NOT licensed to you and as per copyright law, you don’t have the right to use. copy, modify, merge, publish, distribute, sublicense and/or sell copies of this work.
 
-B: If you are using it for personal use or a non-profit organization or a government body: [GPLv3](https://choosealicense.com/licenses/gpl-3.0/) applies.
+  - B: If you are using it for personal use or a non-profit organization or a government body: [GPLv3](https://choosealicense.com/licenses/gpl-3.0/) applies.
 
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
