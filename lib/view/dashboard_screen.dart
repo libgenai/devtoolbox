@@ -133,7 +133,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   color: Colors.white70,
                 ),
                 label: Text(
-                  'QR Image to Text',
+                  'QR Image to Text (WIP)',
                   style: TextStyle(fontSize: 13),
                 ),
               ),
@@ -143,7 +143,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   color: Colors.white70,
                 ),
                 label: Text(
-                  'Text to QR Image',
+                  'Text to QR Image (WIP)',
                   style: TextStyle(fontSize: 13),
                 ),
               ),

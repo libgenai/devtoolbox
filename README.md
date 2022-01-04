@@ -19,3 +19,4 @@ Make sure to [read the LICENSE](/LICENSE.md).
 
 MacOS:
 `flutter build macos --release` will generate the .app file in `build/macos/Build/Products/Release/devtools.app`.
+`test -f DevTools.dmg && rm DevTools.dmg && create-dmg --app-drop-link 400 100 --icon-size 50 --window-size 600 400 --window-pos 400 400 DevTools.dmg build/macos/Build/Products/Release/devtools.app`
