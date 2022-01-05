@@ -9,6 +9,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:macos_ui/macos_ui.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_macos_webview/flutter_macos_webview.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({Key? key}) : super(key: key);
@@ -18,6 +19,7 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
+
   int pageIndex = 0;
 
   final List<Widget> pages = [
@@ -45,6 +47,31 @@ class _DashboardScreenState extends State<DashboardScreen> {
     }
   }
 
+  Future<void> _onOpenPressed(PresentationStyle presentationStyle) async {
+    final webview = FlutterMacOSWebView(
+      onOpen: () => print('Opened'),
+      onClose: () => print('Closed'),
+      onPageStarted: (url) => print('Page started: $url'),
+      onPageFinished: (url) => print('Page finished: $url'),
+      onWebResourceError: (err) {
+        print(
+          'Error: ${err.errorCode}, ${err.errorType}, ${err.domain}, ${err.description}',
+        );
+      },
+    );
+
+    await webview.open(
+      url: 'https://google.com',
+      presentationStyle: presentationStyle,
+      size: Size(400.0, 400.0),
+      userAgent:
+          'Mozilla/5.0 (iPhone; CPU iPhone OS 14_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1',
+    );
+
+    // await Future.delayed(Duration(seconds: 5));
+    // await webview.close();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MacosWindow(
@@ -63,7 +90,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 primary: Colors.white,
                 textStyle: const TextStyle(fontSize: 12),
               ),
-              onPressed: _launchURL,
+              onPressed: () => _onOpenPressed(PresentationStyle.sheet),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
