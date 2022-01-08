@@ -13,7 +13,7 @@ Online utilities for formatting, encoding/decoding etc are dangerous to use (man
 
 This app is written in Flutter and therefore, works on MacOS, Linux, Windows and even Web if your org would like to host it internally as a webapp. But do not expect this to work on Android and iOS.
 
-Make sure to [read the LICENSE](/LICENSE.md).
+Make sure to read [the LICENSE](/LICENSE.md) and [the CLA](/CLA.md).
 
 ### How to build:
 
@@ -37,3 +37,7 @@ Convert the app to DMG using create-dmg tool
 
 5. Create a DMG file
 `test -f DevTools.dmg && rm DevTools.dmg && create-dmg --app-drop-link 400 100 --icon-size 50 --window-size 600 400 --window-pos 400 400 DevTools.dmg build/macos/Build/Products/Release/devtools.app`
+
+### UI Widget Library
+
+We use [macos_ui](https://github.com/GroovinChip/macos_ui). You can find [examples of all their widgets here](https://github.com/GroovinChip/macos_ui/tree/dev/example/lib/pages).
