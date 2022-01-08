@@ -2,6 +2,7 @@ import 'package:devtools/view/tabs/base64_encoding_decoding_screen.dart';
 import 'package:devtools/view/tabs/json_format_validate_screen.dart';
 import 'package:devtools/view/tabs/json_to_yaml_screen.dart';
 import 'package:devtools/view/tabs/jwt_debugger_screen.dart';
+import 'package:devtools/view/tabs/word_count.dart';
 import 'package:devtools/view/tabs/yaml_to_json_screen.dart';
 import 'package:devtools/view/tabs/qr_code_to_text_screen.dart';
 import 'package:devtools/view/tabs/text_to_qr_code_screen.dart';
@@ -28,6 +29,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     const QrCodeToTextScreen(),
     const TextToQrCodeScreen(),
     const JWTDebuggerScreen(),
+    const WordCountScreen(),
   ];
 
   Color textLuminance(Color backgroundColor) {
@@ -154,6 +156,16 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 ),
                 label: Text(
                   'JWT Debugger',
+                  style: TextStyle(fontSize: 13),
+                ),
+              ),
+              SidebarItem(
+                leading: MacosIcon(
+                  Icons.lock,
+                  color: Colors.white70,
+                ),
+                label: Text(
+                  'Word Count',
                   style: TextStyle(fontSize: 13),
                 ),
               ),
