@@ -38,6 +38,19 @@ Convert the app to DMG using create-dmg tool
 5. Create a DMG file
 `test -f DevTools.dmg && rm DevTools.dmg && create-dmg --app-drop-link 400 100 --icon-size 50 --window-size 600 400 --window-pos 400 400 DevTools.dmg build/macos/Build/Products/Release/devtools.app`
 
-### UI Widget Library
+Windows:
+
+1. ensure your flutter base is up-to-date : `devtools requires SDK version >=2.15.1 <3.0.0, version solving failed.`
+
+`flutter update`
+
+2. ensure desktop building is enabled otherwise you will get an error `"build windows" is not currently supported. To enable, run "flutter config --enable-windows-desktop".`
+
+`flutter config --enable-windows-desktop`
+
+3. Build the app using
+`flutter build windows --release`
+this will generate the .exe file in `\build\windows\runner\Release\devtoolbox.exe`.
+
 
 We use [macos_ui](https://github.com/GroovinChip/macos_ui). You can find [examples of all their widgets here](https://github.com/GroovinChip/macos_ui/tree/dev/example/lib/pages).
