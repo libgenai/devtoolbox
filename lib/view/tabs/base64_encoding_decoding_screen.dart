@@ -17,8 +17,8 @@ class Base64EncodingDecodingScreen extends StatefulWidget {
 class _Base64EncodingDecodingScreenState
     extends State<Base64EncodingDecodingScreen> {
   int _groupValue = 0;
-  TextEditingController _inputTextController = TextEditingController();
-  TextEditingController _outputTextController = TextEditingController();
+  final TextEditingController _inputTextController = TextEditingController();
+  final TextEditingController _outputTextController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {

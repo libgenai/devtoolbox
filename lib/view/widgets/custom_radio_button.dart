@@ -6,12 +6,9 @@ class CustomRadioListTile<T> extends StatelessWidget {
   final String title;
   final ValueChanged<T?> onChanged;
 
-  const CustomRadioListTile({
-    required this.value,
-    required this.groupValue,
-    required this.onChanged,
-    required this.title,
-  });
+  const CustomRadioListTile({Key? key, required this.value, required this.groupValue, required this.title, required this.onChanged}) : super(key: key);
+
+  
 
   @override
   Widget build(BuildContext context) {

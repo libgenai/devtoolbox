@@ -1,7 +1,5 @@
 import 'dart:convert';
-
 import 'package:clipboard/clipboard.dart';
-import 'package:devtools/view/widgets/custom_radio_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:macos_ui/macos_ui.dart';
