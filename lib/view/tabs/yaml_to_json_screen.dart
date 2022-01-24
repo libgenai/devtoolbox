@@ -14,8 +14,8 @@ class YamlToJsonScreen extends StatefulWidget {
 }
 
 class _YamlToJsonScreenState extends State<YamlToJsonScreen> {
-  TextEditingController _inputTextController = TextEditingController();
-  TextEditingController _outputTextController = TextEditingController();
+  final TextEditingController _inputTextController = TextEditingController();
+  final TextEditingController _outputTextController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {

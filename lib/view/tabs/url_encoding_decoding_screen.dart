@@ -15,8 +15,8 @@ class UrlEncodingDecodingScreen extends StatefulWidget {
 class _UrlEncodingDecodingScreenState
     extends State<UrlEncodingDecodingScreen> {
   int _groupValue = 0;
-  TextEditingController _inputTextController = TextEditingController();
-  TextEditingController _outputTextController = TextEditingController();
+  final TextEditingController _inputTextController = TextEditingController();
+  final TextEditingController _outputTextController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {

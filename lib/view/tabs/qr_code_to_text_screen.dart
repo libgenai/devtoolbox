@@ -14,8 +14,8 @@ class QrCodeToTextScreen extends StatefulWidget {
 }
 
 class _QrCodeToTextScreenState extends State<QrCodeToTextScreen> {
-  TextEditingController _inputTextController = TextEditingController();
-  TextEditingController _outputTextController = TextEditingController();
+  final TextEditingController _inputTextController = TextEditingController();
+  final TextEditingController _outputTextController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {

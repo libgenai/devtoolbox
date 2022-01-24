@@ -7,7 +7,6 @@ import 'package:devtools/view/tabs/word_count.dart';
 import 'package:devtools/view/tabs/yaml_to_json_screen.dart';
 import 'package:devtools/view/tabs/qr_code_to_text_screen.dart';
 import 'package:devtools/view/tabs/text_to_qr_code_screen.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:macos_ui/macos_ui.dart';
 import 'package:url_launcher/url_launcher.dart';
