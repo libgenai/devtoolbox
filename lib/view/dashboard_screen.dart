@@ -19,7 +19,6 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
-
   int pageIndex = 0;
 
   final List<Widget> pages = [
@@ -38,14 +37,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
         : Colors.white;
   }
 
-  _launchURL() async {
-    const url = 'https://github.com/nileshtrivedi/devtoolbox/discussions';
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
+  // _launchURL() async {
+  //   const url = 'https://github.com/nileshtrivedi/devtoolbox/discussions';
+  //   if (await canLaunch(url)) {
+  //     await launch(url);
+  //   } else {
+  //     throw 'Could not launch $url';
+  //   }
+  // }
 
   Future<void> _onOpenPressed(PresentationStyle presentationStyle) async {
     final webview = FlutterMacOSWebView(
@@ -61,9 +60,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
     );
 
     await webview.open(
-      url: 'https://google.com',
+      url:
+          'file:///Users/helix/code/devtools/assets/CyberChef_v9.37.0/CyberChef_v9.37.0.html',
       presentationStyle: presentationStyle,
-      size: Size(400.0, 400.0),
+      size: Size(1200.0, 900.0),
       userAgent:
           'Mozilla/5.0 (iPhone; CPU iPhone OS 14_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1',
     );
@@ -96,13 +96,13 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: const [
                   Icon(
-                    Icons.mail,
+                    Icons.settings,
                     size: 10,
                   ),
                   SizedBox(
                     width: 5,
                   ),
-                  Text('Feedback for v1.0.0'),
+                  Text('Open CyberChef'),
                 ],
               ),
             ),
