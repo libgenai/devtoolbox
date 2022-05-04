@@ -89,13 +89,13 @@ class _DashboardScreenState extends State<DashboardScreen> {
             currentIndex: pageIndex,
             onChanged: (i) => setState(() => pageIndex = i),
             scrollController: controller,
-            items: const [
+            items: [
               SidebarItem(
                 leading: MacosIcon(
                   Icons.lock,
-                  color: Colors.white70,
+                  color: pageIndex == 0 ? Colors.white70 : Colors.grey,
                 ),
-                label: Text(
+                label: const Text(
                   'Base64 Encoding/Decoding',
                   style: TextStyle(fontSize: 13),
                 ),
@@ -103,9 +103,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
               SidebarItem(
                 leading: MacosIcon(
                   Icons.lock,
-                  color: Colors.white70,
+                  color: pageIndex == 1 ? Colors.white70 : Colors.grey,
                 ),
-                label: Text(
+                label: const Text(
                   'JSON Format/Validate',
                   style: TextStyle(fontSize: 13),
                 ),
@@ -113,9 +113,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
               SidebarItem(
                 leading: MacosIcon(
                   Icons.lock,
-                  color: Colors.white70,
+                  color: pageIndex == 2 ? Colors.white70 : Colors.grey,
                 ),
-                label: Text(
+                label: const Text(
                   'JSON to YAML',
                   style: TextStyle(fontSize: 13),
                 ),
@@ -123,9 +123,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
               SidebarItem(
                 leading: MacosIcon(
                   Icons.lock,
-                  color: Colors.white70,
+                  color: pageIndex == 3 ? Colors.white70 : Colors.grey,
                 ),
-                label: Text(
+                label: const Text(
                   'YAML to JSON',
                   style: TextStyle(fontSize: 13),
                 ),
@@ -133,9 +133,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
               SidebarItem(
                 leading: MacosIcon(
                   Icons.lock,
-                  color: Colors.white70,
+                  color: pageIndex == 4 ? Colors.white70 : Colors.grey,
                 ),
-                label: Text(
+                label: const Text(
                   'QR Image to Text (WIP)',
                   style: TextStyle(fontSize: 13),
                 ),
@@ -143,9 +143,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
               SidebarItem(
                 leading: MacosIcon(
                   Icons.lock,
-                  color: Colors.white70,
+                  color: pageIndex == 5 ? Colors.white70 : Colors.grey,
                 ),
-                label: Text(
+                label: const Text(
                   'Text to QR Image (WIP)',
                   style: TextStyle(fontSize: 13),
                 ),
@@ -153,9 +153,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
               SidebarItem(
                 leading: MacosIcon(
                   Icons.lock,
-                  color: Colors.white70,
+                  color: pageIndex == 6 ? Colors.white70 : Colors.grey,
                 ),
-                label: Text(
+                label: const Text(
                   'JWT Debugger',
                   style: TextStyle(fontSize: 13),
                 ),
@@ -163,20 +163,19 @@ class _DashboardScreenState extends State<DashboardScreen> {
               SidebarItem(
                 leading: MacosIcon(
                   Icons.lock,
-                  color: Colors.white70,
+                  color: pageIndex == 7 ? Colors.white70 : Colors.grey,
                 ),
-                label: Text(
+                label: const Text(
                   'Word Count',
                   style: TextStyle(fontSize: 13),
                 ),
               ),
-
               SidebarItem(
                 leading: MacosIcon(
                   Icons.lock,
-                  color: Colors.white70,
+                  color: pageIndex == 8 ? Colors.white70 : Colors.grey,
                 ),
-                label: Text(
+                label: const Text(
                   'URL Encoding / Decoding',
                   style: TextStyle(fontSize: 13),
                 ),
